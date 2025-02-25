@@ -1,0 +1,23 @@
+[project]
+name = "llm-1min"
+version = "0.1"
+description = "LLM access to models served by 1minAI"
+readme = "README.md"
+authors = [{name = "Sasa Cekovic"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+  "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+  "llm",
+  "requests"
+]
+
+[project.urls]
+Homepage = "https://github.com/SasaCekovic/llm-1min"
+Changelog = "https://github.com/SasaCekovic/llm-1min/releases"
+Issues = "https://github.com/SasaCekovic/llm-1min/issues"
+CI = "https://github.com/SasaCekovic/llm-1min/actions"
+
+[project.entry-points.llm]
+1min = "llm_1min"
