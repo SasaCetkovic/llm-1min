@@ -25,7 +25,8 @@ def register_models(register):
         "gemini-1.5-flash",
         "deepseek-chat",
         "grok-2",
-        "command"
+        "command",
+        "meta/meta-llama-3.1-405b-instruct"
     ]
     for model_id in models:
         register(OneMin(model_id))
