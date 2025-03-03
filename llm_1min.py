@@ -110,10 +110,25 @@ class OneMin(llm.Model):
                 )
                 response.raise_for_status()
 
-                for line in response.iter_content(chunk_size=8):
-                    if line:
-                        decoded = line.decode('utf-8', errors='replace')
-                        yield decoded
+                buffer = b""
+
+                for chunk in response.iter_content(chunk_size=2):
+                    if chunk:
+                        buffer += chunk
+
+                        try:
+                            decoded = buffer.decode('utf-8')
+                            yield decoded
+                            # Reset buffer after successful decode
+                            buffer = b""
+                        except UnicodeDecodeError:
+                            # If we can't decode yet, we might have a partial character
+                            # Continue collecting bytes until we can decode
+                            pass
+
+                # Handle any remaining bytes in buffer
+                if buffer:
+                    yield buffer.decode('utf-8', errors='ignore')
 
             except Exception as e:
                 raise llm.ModelError(f"API request failed: {str(e)}")
