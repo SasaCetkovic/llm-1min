@@ -18,15 +18,24 @@ def register_models(register):
         "mistral-large-latest",
         "mistral-small-latest",
         "mistral-nemo",
+        "pixtral-12b",
         "claude-3-opus-20240229",
+        "claude-3-7-sonnet-20250219",
         "claude-3-5-sonnet-20240620",
         "claude-3-5-haiku-20241022",
         "gemini-1.5-pro",
         "gemini-1.5-flash",
         "deepseek-chat",
+        "deepseek-reasoner",
         "grok-2",
         "command",
-        "meta/meta-llama-3.1-405b-instruct"
+        "sonar",
+        "sonar-pro",
+        "sonar-reasoning",
+        "sonar-reasoning-pro",
+        "meta/meta-llama-3.1-405b-instruct",
+        "meta/meta-llama-3-70b-instruct",
+        "meta/llama-2-70b-chat"
     ]
     for model_id in models:
         register(OneMin(model_id))

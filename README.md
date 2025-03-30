@@ -50,15 +50,24 @@ llm -m 1min/claude-3-5-haiku-20241022 "What's the meaning of life?"
 - 1min/mistral-large-latest
 - 1min/mistral-small-latest
 - 1min/mistral-nemo
+- 1min/pixtral-12b
 - 1min/claude-3-opus-20240229
+- 1min/claude-3-7-sonnet-20250219
 - 1min/claude-3-5-sonnet-20240620
 - 1min/claude-3-5-haiku-20241022
 - 1min/gemini-1.5-pro
 - 1min/gemini-1.5-flash
 - 1min/deepseek-chat
+- 1min/deepseek-reasoner
 - 1min/grok-2
 - 1min/command
+- 1min/sonar
+- 1min/sonar-pro
+- 1min/sonar-reasoning
+- 1min/sonar-reasoning-pro
 - 1min/meta/meta-llama-3.1-405b-instruct
+- 1min/meta/meta-llama-3-70b-instruct
+- 1min/meta/llama-2-70b-chat
 
 ## To Do
 
